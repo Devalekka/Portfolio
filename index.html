@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Home Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Devalekka</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="projects.html">Projects</a></li>
+       <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">My Profile links</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+   <div class="hero-content">
+  <h1>I'm Devalekka</h1>
+  <div style="margin-top: 20px;"></div> <!-- Just a bit of spacing -->
+  <h2 class="typing-text"></h2>
+  <div style="margin-top: 20px;"></div> <!-- Just a bit of spacing -->
+  <a href="Devalekka-12 resume.pdf" target="_blank">
+  <button class="download-cv">View CV</button>
+</a>
+</div>
+
+    <div class="hero-image">
+      <img src="profile.jpeg" alt="Profile Image" />
+    </div>
+  </section>
+
+  <!-- Typing Effect Script -->
+<script>
+  const roles = ["Data Analyst", "Data Scientist", "Web Developer"];
+  const textElement = document.querySelector(".typing-text");
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeRole() {
+    const currentRole = roles[roleIndex];
+
+    // Update text content
+    if (isDeleting) {
+      charIndex--;
+      textElement.textContent = currentRole.substring(0, charIndex);
+    } else {
+      charIndex++;
+      textElement.textContent = currentRole.substring(0, charIndex);
+    }
+
+    // ✨ Normal typing speed: not too fast, not slow
+    let typingSpeed = isDeleting ? 100 : 160;
+
+    // Pause only after full word is typed
+    if (!isDeleting && charIndex === currentRole.length) {
+      setTimeout(() => {
+        isDeleting = true;
+        typeRole();
+      }, 1000); // slight pause before deleting
+      return;
+    }
+
+    // After deleting, move to next
+    if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+
+    setTimeout(typeRole, typingSpeed);
+  }
+
+  typeRole();
+</script>
+
+
+</body>
+</html>
