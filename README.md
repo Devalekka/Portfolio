@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website!  
 This is where I showcase **who I am**, the **projects I’ve built**, and the **skills I bring to the table** as an aspiring Data Analyst, Data Scientist, and AI enthusiast.
 
-Live Site 👉 [devalekka.github.io/deva](https://devalekka.github.io/Portfolio/)
+Live Site 👉 [devalekka.github.io/devalekka-portfolio](https://devalekka.github.io/Portfolio/)
 
 ---
 
