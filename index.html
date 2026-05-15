@@ -10,12 +10,17 @@
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="logo">Devalekka</div>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="education.html">Education</a></li>
       <li><a href="projects.html">Projects</a></li>
-       <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
       <li><a href="contact.html">My Profile links</a></li>
     </ul>
   </nav>
@@ -113,6 +118,25 @@
   }
 
   window.addEventListener("scroll", handleScrollReveal, { passive: true });
+</script>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+    });
+
+    navLinks.addEventListener('click', (event) => {
+      if (event.target.tagName === 'A') {
+        navLinks.classList.remove('open');
+        menuToggle.classList.remove('active');
+      }
+    });
+  }
 </script>
 
 
