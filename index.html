@@ -21,21 +21,19 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-   <div class="hero-content">
-  <h1>I'm Devalekka</h1>
-  <div style="margin-top: 20px;"></div> <!-- Just a bit of spacing -->
-  <h2 class="typing-text"></h2>
-  <div style="margin-top: 20px;"></div> <!-- Just a bit of spacing -->
-  <a href="Devalekka-12 resume.pdf" target="_blank">
-  <button class="download-cv">View CV</button>
-</a>
-</div>
+<section class="intro">
+  <div class="intro__media scroll-reveal">
+    <img src="profile2..png" alt="Profile Image" />
+  </div>
 
-    <div class="hero-image">
-      <img src="profile.jpeg" alt="Profile Image" />
-    </div>
-  </section>
+  <div class="intro__content scroll-reveal">
+    <h1>I'm Devalekka</h1>
+    <h2 class="typing-text"></h2>
+    <a href="DEVALEKKA PALANIVEL RESUME.pdf" target="_blank">
+      <button class="download-cv">View CV</button>
+    </a>
+  </div>
+</section>
 
   <!-- Typing Effect Script -->
 <script>
@@ -79,8 +77,81 @@
   }
 
   typeRole();
+
+
 </script>
+
+
+<section class="hero1">
+  <div class="hero-content1 scroll-reveal">
+    <p><b>🏆 Selected Among Top 500 Ideas & Won ₹15,000 Cash Prize — Niral Thiruvizha, Tamil Nadu</b></p>
+    <p class="accent-text"><b>NutriSnap — AI-Powered Nutrition Tracker</b></p>
+    <p>Out of 24,411 ideas submitted at Niral Thiruvizha, NutriSnap was selected among the Top 500 ideas and awarded a ₹15,000 cash prize. NutriSnap is an AI-powered mobile app that makes nutrition tracking effortless — just snap a photo, speak, or type what you eat, and the app does the rest. It identifies food items using AI and instantly estimates nutritional values, removing the hassle of manual logging. With streak tracking, reward systems, and friend leaderboards, the app keeps users motivated and consistent. Supporting both Tamil and English with voice interaction, NutriSnap is built to be fast, smart, and accessible for everyone.</p>
+  </div>
+
+    <div class="feature__media scroll-reveal">
+      <img src="niral.jpeg" alt="Profile Image" />
+    </div>
+  </section>
+
+<script>
+  let lastScrollY = window.scrollY;
+  let revealTimer;
+
+  function handleScrollReveal() {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY < lastScrollY) {
+      document.body.classList.add("scrolling-up");
+      clearTimeout(revealTimer);
+      revealTimer = setTimeout(() => {
+        document.body.classList.remove("scrolling-up");
+      }, 900);
+    }
+
+    lastScrollY = currentScrollY;
+  }
+
+  window.addEventListener("scroll", handleScrollReveal, { passive: true });
+</script>
+
+
+
+
+
+ <section class="hero1">
+<div class="hero-content1 scroll-reveal">
+ <p class="accent-heading"><b>NSS Volunteer</b></p>
+ 
+<p>Worked as an active NSS (National Service Scheme) volunteer during college, contributing to social and environmental initiatives. Participated in tree plantation drives and conducted awareness programs in government schools to promote environmental responsibility and community development.</p>
+</div>
+
+    <div class="feature__media scroll-reveal">
+      <img src="NSS voluteer.jpeg" alt="Profile Image" />
+    </div>
+  </section>
+
+
+
+  
+ <section class="hero1">
+<div class="hero-content1 scroll-reveal">
+ <p class="accent-heading"><b>Department Treasurer & Event Compere</b></p>
+ 
+<p>During my college journey, I actively participated in various extracurricular and leadership activities. I served as the Treasurer of my department, where I was involved in coordinating and managing departmental activities and events. I also compèred multiple college programs and events, which helped me strengthen my public speaking, communication, leadership, and audience engagement skills.</p>
+</div>
+
+    <div class="feature__media scroll-reveal">
+      <img src="host.jpeg" alt="Profile Image" />
+    </div>
+  </section>
+
+
+
+
 
 
 </body>
 </html>
+
+
